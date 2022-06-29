@@ -1,0 +1,8 @@
+@namespace(uri="archmetrics.model.com",prefix="")
+package archmetrics;
+
+class Metric{
+	attr String name;
+	
+}
+
