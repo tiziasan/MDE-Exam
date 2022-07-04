@@ -1,0 +1,57 @@
+var db = new Component;
+db.name = "DB";
+var db2 = new Component;
+db2.name = "RecoveryDB";
+var engine = new Component;
+engine.name = "Computational engine";
+var sensor1 = new Component;
+sensor1.name = "Sensor1";
+var sensor2 = new Component;
+sensor2.name = "Sensor2";
+var dash = new Component;
+dash.name = "Dashboard";
+
+var connector1 = new Connector;
+connector1.name = "connector1";
+var connector2 = new Connector;
+connector2.name = "connector2";
+var connector3 = new Connector;
+connector3.name = "connector3";
+var connector4 = new Connector;
+connector4.name = "connector4";
+var connector5 = new Connector;
+connector5.name = "connector5";
+var connector5 = new Connector;
+connector6.name = "connector6";
+var connector5 = new Connector;
+connector7.name = "connector7";
+ 
+ 
+var connectorsDash : Sequence = new Sequence;
+connectorDash.add(connector1);
+var connectorsEngine : Sequence = new Sequence;
+connectorEngine.add(connector1);
+connectorEngine.add(connector2);
+connectorEngine.add(connector3);
+var connectorsDb : Sequence = new Sequence;
+connectorsDb.add(connector2);
+connectorsDb.add(connector4);
+connectorsDb.add(connector6);
+var connectorsDb2 : Sequence = new Sequence;
+connectorsDb2.add(connector3);
+connectorsDb2.add(connector5);
+connectorsDb2.add(connector7);
+var connectorsSensor1 : Sequence = new Sequence;
+connectorsSensor1.add(connector4);
+connectorsSensor1.add(connector5);
+var connectorsSensor2 : Sequence = new Sequence;
+connectorsSensor1.add(connector6);
+connectorsSensor1.add(connector7);
+
+
+db.connectors = connectorsDb;
+db2.connectors = connectorsDb2;
+engine.connectors = connectorsEngine;
+sensor1.connectors = connectorsSensor1;
+sensor2.connectors = connectorsSensor2;
+dash.connectors = connectorsDash;
