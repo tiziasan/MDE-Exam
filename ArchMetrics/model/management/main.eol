@@ -11,28 +11,43 @@ sensor2.name = "Sensor2";
 var dash = new Component;
 dash.name = "Dashboard";
 
+
 var connector1 = new Connector;
 connector1.name = "connector1";
+connector1.componentA =dash;
+connector1.componentB =engine;
 var connector2 = new Connector;
 connector2.name = "connector2";
+connector2.componentA =engine;
+connector2.componentB =db;
 var connector3 = new Connector;
 connector3.name = "connector3";
+connector3.componentA =engine;
+connector3.componentB =db2;
 var connector4 = new Connector;
 connector4.name = "connector4";
+connector4.componentA =db;
+connector4.componentB =sensor1;
 var connector5 = new Connector;
 connector5.name = "connector5";
-var connector5 = new Connector;
+connector5.componentA =db2;
+connector5.componentB =sensor1;
+var connector6 = new Connector;
 connector6.name = "connector6";
-var connector5 = new Connector;
+connector6.componentA =db;
+connector6.componentB =sensor2;
+var connector7 = new Connector;
 connector7.name = "connector7";
+connector7.componentA =db2;
+connector7.componentB =sensor2;
  
  
 var connectorsDash : Sequence = new Sequence;
-connectorDash.add(connector1);
+connectorsDash.add(connector1);
 var connectorsEngine : Sequence = new Sequence;
-connectorEngine.add(connector1);
-connectorEngine.add(connector2);
-connectorEngine.add(connector3);
+connectorsEngine.add(connector1);
+connectorsEngine.add(connector2);
+connectorsEngine.add(connector3);
 var connectorsDb : Sequence = new Sequence;
 connectorsDb.add(connector2);
 connectorsDb.add(connector4);
@@ -45,8 +60,8 @@ var connectorsSensor1 : Sequence = new Sequence;
 connectorsSensor1.add(connector4);
 connectorsSensor1.add(connector5);
 var connectorsSensor2 : Sequence = new Sequence;
-connectorsSensor1.add(connector6);
-connectorsSensor1.add(connector7);
+connectorsSensor2.add(connector6);
+connectorsSensor2.add(connector7);
 
 
 db.connectors = connectorsDb;
@@ -55,3 +70,5 @@ engine.connectors = connectorsEngine;
 sensor1.connectors = connectorsSensor1;
 sensor2.connectors = connectorsSensor2;
 dash.connectors = connectorsDash;
+engine.connectors.println();
+

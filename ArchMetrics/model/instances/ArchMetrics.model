@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="archmetrics.model.com">
+  <Component name="DB" connectors="/7 /9 /11"/>
+  <Component name="RecoveryDB" connectors="/8 /10 /12"/>
+  <Component name="Computational engine" connectors="/6 /7 /8"/>
+  <Component name="Sensor1" connectors="/9 /10"/>
+  <Component name="Sensor2" connectors="/11 /12"/>
+  <Component name="Dashboard" connectors="/6"/>
+  <Connector name="connector1" componentA="/5" componentB="/2"/>
+  <Connector name="connector2" componentA="/2" componentB="/0"/>
+  <Connector name="connector3" componentA="/2" componentB="/1"/>
+  <Connector name="connector4" componentA="/0" componentB="/3"/>
+  <Connector name="connector5" componentA="/1" componentB="/3"/>
+  <Connector name="connector6" componentA="/0" componentB="/4"/>
+  <Connector name="connector7" componentA="/1" componentB="/4"/>
+</xmi:XMI>

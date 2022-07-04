@@ -1,12 +1,14 @@
-@namespace(uri="archmetrics.model.com",prefix="")
+@namespace(uri="archmetrics.model.com", prefix="")
 package archmetrics;
 
-class Component{
+class Component {
 	attr String name;
-	val Connector[*] connectors;
+	ref Connector[*] connectors;
 }
 
-class Connector{
+class Connector {
 	attr String name;
-	ref Component component;
+	ref Component  componentA;
+	ref Component  componentB;
 }
+
