@@ -1,7 +1,8 @@
-@namespace(uri="archmetrics.model.com", prefix="")
+@namespace(uri="metricmodel.model.com", prefix="")
 package archmetrics;
 
 class Metric {
 	attr String name;
+	attr float value;
 }
 

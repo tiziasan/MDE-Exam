@@ -1,0 +1,8 @@
+rule IndexPage
+  transform data : MetricModel!Metric { 
+  template : "index.egl"
+  target : "generated/" + "index.html"
+  parameters: Map {
+  		"metrics" = MetricModel!Metric.allInstances()
+  }
+}

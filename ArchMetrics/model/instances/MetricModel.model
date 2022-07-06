@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="metricmodel.model.com">
+  <Metric name="number of components" value="6.0"/>
+  <Metric name="number of connectors" value="7.0"/>
+</xmi:XMI>
